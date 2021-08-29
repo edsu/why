@@ -64,10 +64,19 @@
   </div>
 
   <script>
+
     function more() {
       const i = Math.floor(Math.random() * data.length)
-      document.getElementById("thing").innerHTML = data[i]
+      const thing = data[i]
+      document.getElementById("thing").innerHTML = thing
+      window.location.hash = thing
     }
+
+    if (window.location.hash) {
+      const text = decodeURI(window.location.hash.replace('#', ''))
+      document.getElementById("thing").innerHTML = text
+    }
+
   </script>
 
 </body>
