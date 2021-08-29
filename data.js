@@ -173,4 +173,15 @@ var data = [
   "Web archiving",
   "Xena (software)",
 
+  // I added these
+
+  "Web site",
+  "Web page",
+  "Web server",
+  "URL",
+  "Content",
+  "Stylesheets",
+  "Privacy",
+  "Security",
+
 ]
