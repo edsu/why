@@ -14,26 +14,47 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
 
     body {
       background-color: black;
       color: white;
-      height: 90%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex-wrap: wrap;
-      align-items: center;
+    }
+
+    div {
+      border: thin solid white;
+    }
+
+    #container {
+      padding: 15px;
+      text-align: center;
+      display: grid; 
+      height: 90vh;
     }
 
     #why {
-      margin-top: 20%;
       font-size: 30pt;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      overflow-wrap: break-word;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+    }
+
+    #why div {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     #more {
-      margin-top: 200px;
+      grid-row-start: 5;
+    }
+
+    #cites {
+      grid-row-start: 6;
+      font-size: 10pt;
     }
 
     button {
@@ -44,13 +65,25 @@
     }
 
     button:hover {
-      border: 5px groove white;
+      border: 5px groove lightgreen;
+      color: lightgreen;
+      background-color: black;
+      cursor: pointer;
     }
-      
 
     #thing {
       color: lightgreen;
       font-weight: bold;
+    }
+
+    a {
+      color: lightgreen;
+    }
+
+    @media (min-width:961px) {
+      #why {
+        font-size: 50pt;
+      }
     }
 
   </style>
@@ -59,12 +92,22 @@
 
 <body>
 
-  <div id="why">
-    Why "<span id="thing">Web Archiving</span>" Is No Longer a Useful Concept or Phrase.
-  </div>
+  <div id="container">
 
-  <div id="more">
-    <button onclick="more()">Why?</button>
+    <div id="why">
+      <div>
+        Why "<span id="thing">Web Archiving</span>" Is No Longer a Useful Concept or Phrase.
+      </div>
+    </div>
+
+    <div id="more">
+      <button onclick="more()">Why?</button>
+    </div>
+
+    <div id="cites">
+      Lynch, C. 2021. <a href="https://www.ischool.berkeley.edu/events/2021/why-web-archiving-no-longer-useful-concept-or-phrase">Why "Web Archiving" Is No Longer a Useful Concept or Phrase</a>. Berkeley School of Information.
+    </div>
+
   </div>
 
   <script>
