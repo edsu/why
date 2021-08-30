@@ -110,9 +110,11 @@
 
     function more() {
       const i = Math.floor(Math.random() * data.length)
-      const thing = data[i]
-      document.getElementById("thing").innerHTML = thing
-      window.location.hash = thing
+      const text = data[i]
+      const thing = document.getElementById("thing")
+      thing.innerHTML = text
+      thing.focus()
+      window.location.hash = text
     }
 
     if (window.location.hash) {
