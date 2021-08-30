@@ -58,15 +58,21 @@
       background-color: lightgreen;
       border: 5px solid black;
       font-weight: bold;
-    }
-
-    button:hover, button:active {
-      border: 5px groove lightgreen;
-      color: lightgreen;
-      background-color: black;
       cursor: pointer;
     }
 
+    button:active {
+      border: 5px groove lightgreen;
+      color: lightgreen;
+      background-color: black;
+    }
+
+    button:active:after {
+      background-color: lightgreen;
+      border: 5px solid black;
+      color: black;
+    }
+ 
     #thing {
       color: lightgreen;
       font-weight: bold;
